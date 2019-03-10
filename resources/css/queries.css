@@ -1,5 +1,8 @@
 /* Large tablets/small PCs up to 1200px  */
 @media only screen and (max-width: 1200px) {
+    
+    
+    
     .hero-text-box {
         width: 100%;
         padding: 0 2%;
@@ -7,17 +10,46 @@
     
     .row { padding: 0 2%; }
     
+    .main-nav { display: none; }
+    
+    .mobile-nav-icon { display: inline-block; font-size: 150%;}
+    
+    .main-nav {
+        float: left;
+        margin-top: 35px;
+        margin-left: 20px;
+    }
+    
+    .main-nav li {
+        margin-top: 4%;
+        font-size: 115%;
+    }
+    
+    .sticky .main-nav li{ margin-top: 2%;}
+    
+    .sticky .main-nav { margin-top: 10px; } 
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited{ padding: 10px 0;}
+    .sticky .mobile-nav-icon {margin-top: 10px;}
+    .sticky .mobile-nav-icon i {color: #555;}
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited{
+        padding: 25px 0;
+        color: #555;
+    }
+    
 }
 
 /* Tablets/portrait modes up to 1023px  */
 @media only screen and (max-width: 1023px) {
-    body { font-size: 18px; overflow: hidden;}
+
+    body { font-size: 18px;}
     
     section { padding: 60px; }
     
     .main-nav { font-size: 95%}
     
-    .hero-text-box { margin-left: 1em; }
+    .hero-text-box { padding: 2em; }
     
     .long-copy {
     width: 80%;
@@ -51,6 +83,29 @@
     .sign-up-perks1 { height: 8em;}
     
     .contact-form { width: 80%;}
+    
+    .main-nav { display: none; }
+    
+    .mobile-nav-icon { display: inline-block;}
+    
+    .main-nav {
+        float: left;
+        margin-top: 35px;
+        margin-left: 20px;
+    }
+    
+    .main-nav li {
+        margin-top: 4%;
+    }
+    
+    .sticky .main-nav li{ margin-top: 2%;}
+    
+    .sticky .main-nav { margin-top: 10px; } 
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited{ padding: 10px 0;}
+    .sticky .mobile-nav-icon {margin-top: 10px;}
+    .sticky .mobile-nav-icon i {color: #555;}
+    
 }
 
 /* Phones/tablets up to 767px  */

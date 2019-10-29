@@ -1,0 +1,48 @@
+/* Phones/tablets up to 767px  */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    h2:after {
+        margin-left: 10%;
+    }
+
+    section {
+        padding: 30px 0
+    }
+
+    footer {
+        font-size: 95%;
+    }
+
+    .landing-page-scale,
+    .portrait-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .portrait-image img {
+        height: 25vh;
+    }
+
+    .portrait-buttons a {
+        opacity: 0.6;
+        padding: 0.3em 1.3em 0.3em 1.3em;
+        margin: 0 1vw 0 1vw;
+        border-radius: 0.5em;
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+    h1 {}
+}

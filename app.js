@@ -4,36 +4,38 @@ for (let i = 0; i < logo.length; i++) {
     console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
 }
 
-// const box2 = document.querySelector(".skills-svg");
-// const buttoniz = document.body;
-
-// //box2.style.display = 'none';
-
-// buttoniz.onwheel = expan1d;
-// //buttoniz.ontouchstart = expan1d;
-
-// function expan1d() {
-//     console.log("yebalu");
-//     box2.style.visibility = 'visible';
-// };
-
-
-const box2 = document.querySelector(".skills-svg");
+const box2 = document.querySelector(".skills-page-scale");
 const buttoniz = document.body;
-var isHidden = true;
 
+box2.style.display = 'none';
 
 buttoniz.onwheel = expan1d;
+buttoniz.ontouchstart = expan1d;
 
 function expan1d() {
-    console.log(isHidden);
-    if (isHidden) {
-        box2.hidden = !box2.hidden;
-    };
-    isHidden = false;
-    console.log("123123");
-    console.log(isHidden);
+    console.log("yebalu");
+    box2.style.display = 'flex';
 };
+
+
+// const box2 = document.querySelector(".pidor");
+// const buttoniz = document.body;
+// var isHidden = true;
+// console.log(box2);
+
+// buttoniz.onwheel = expan1d;
+
+// function expan1d() {
+//     console.log(isHidden);
+//     if (isHidden) {
+//         console.log(box2);
+
+
+//     };
+//     isHidden = false;
+//     console.log("123123");
+//     console.log(isHidden);
+// };
 
 
 

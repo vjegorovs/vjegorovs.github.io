@@ -89,7 +89,7 @@ h2:after {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/resources/images/city-cover.jpg);
     background-size: cover;
     background-position: center;
-    height: 85vh;
+    height: 100vh;
     background-attachment: scroll;
     justify-content: center;
     align-items: center;
@@ -156,7 +156,7 @@ input[type=submit]:active {
 
 .skills-svg {
     background-color: rgb(255, 255, 255);
-
+    visibility: hidden;
 }
 
 .skills-page-scale {
@@ -164,7 +164,7 @@ input[type=submit]:active {
 }
 
 #logo {
-    visibility: visible;
+
     display: flex;
     justify-content: center;
     margin: 3em 0 1em 0;
@@ -241,13 +241,6 @@ input[type=submit]:active {
     padding: 0 15% 0 15%;
     border-bottom: 1px solid #455A64;
 }
-
-
-
-
-
-
-
 
 
 

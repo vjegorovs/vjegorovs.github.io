@@ -1,57 +1,27 @@
 const logo = document.querySelectorAll("#logo path");
 
 for (let i = 0; i < logo.length; i++) {
-    console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+  console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
 }
 
-const box2 = document.querySelector(".skills-page-scale");
+//This here code was the first attempt at all the sections appearing as the user was scrolling, to trigger svg path drawing only on scroll, rather than immediately on load. In the end decided to just use animate.css
+const skillsPage = document.querySelector(".skills-svg");
+const projectsPage = document.querySelector(".projects-svg");
+const skillsPageLogo = document.querySelector(".skills-svg");
+const projectsPageLogo = document.querySelector(".projects-svg");
 const buttoniz = document.body;
 
-box2.style.display = 'none';
+skillsPage.style.display = "none";
+projectsPage.style.display = "none";
 
 buttoniz.onwheel = expan1d;
 buttoniz.ontouchstart = expan1d;
+buttoniz.onscroll = expan1d;
 
 function expan1d() {
-    console.log("yebalu");
-    box2.style.display = 'flex';
-};
-
-
-// const box2 = document.querySelector(".pidor");
-// const buttoniz = document.body;
-// var isHidden = true;
-// console.log(box2);
-
-// buttoniz.onwheel = expan1d;
-
-// function expan1d() {
-//     console.log(isHidden);
-//     if (isHidden) {
-//         console.log(box2);
-
-
-//     };
-//     isHidden = false;
-//     console.log("123123");
-//     console.log(isHidden);
-// };
-
-
-
-
-
-
-// function expan1d() {
-//     box2.style.display = 'flex';
-//     document.getElementById('logo').style.visibility = 'visible';
-//     console.log("ytest123");
-//     box2.style.visibility = 'visible';
-// };
-
-// const box2 = document.querySelector(".skills-svg");
-
-// document.addEventListener("wheel", function () {
-//     event.preventDefault();
-//     box2.backgroundColor = "red";
-// }, true);
+  console.log("test1");
+  skillsPage.style.display = "flex";
+  projectsPage.style.display = "flex";
+  skillsPageLogo.classList.add("animated", "bounceInLeft");
+  projectsPageLogo.classList.add("animated", "bounceInLeft");
+}

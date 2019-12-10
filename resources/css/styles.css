@@ -296,3 +296,53 @@ input[type=submit]:active {
         fill: red;
     }
 }
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+ion-icon {
+    font-size: 1.5em;
+}
+
+footer > div.footerEmail, footer > div.footerLinks {
+    flex: 0 1 50%;
+    justify-content: center;
+}
+
+footer > div.footerEmail {
+    justify-content: endz;
+}
+
+ul.footerLinkUl li {
+    list-style-type: none;
+    margin: 0;
+    padding: 2em 1em 2em 1em;
+}
+
+ul li{
+    display: inline;
+}
+
+ul p {
+    display: flex;
+    flex-direction: row;
+}
+
+
+ul a:link, a:visited {
+    text-decoration: none;
+    color: #546E7A;
+  }
+  
+ul a:hover, a:active {
+    color: darkorange;
+}
+
+ul {
+    overflow: hidden;
+}
+

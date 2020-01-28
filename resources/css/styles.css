@@ -237,6 +237,7 @@ input[type=submit]:active {
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .skills-table-row-column-row1 {

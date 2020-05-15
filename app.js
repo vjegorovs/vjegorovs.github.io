@@ -1,27 +1,52 @@
-const logo = document.querySelectorAll("#logo path");
+let navToggledFlag = false;
+const nav = document.querySelector("ul");
+document.addEventListener("scroll", () => {
+  if (
+    window.scrollY >=
+      document.querySelector(".landing-page").offsetHeight - 150 &&
+    !navToggledFlag
+  ) {
+    nav.classList.toggle("navigation-hidden");
+    nav.classList.toggle("navigation-visible");
+    navToggledFlag = !navToggledFlag;
+  } else if (
+    window.scrollY <=
+      document.querySelector(".landing-page").offsetHeight - 150 &&
+    navToggledFlag
+  ) {
+    nav.classList.toggle("navigation-visible");
+    nav.classList.toggle("navigation-hidden");
+    navToggledFlag = !navToggledFlag;
+  }
+});
 
-for (let i = 0; i < logo.length; i++) {
-  console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
-}
+const navBar = document.querySelector(".navbar");
+console.log(document.querySelector(".landing-page").offsetHeight);
 
-//This here code was the first attempt at all the sections appearing as the user was scrolling, to trigger svg path drawing only on scroll, rather than immediately on load. In the end decided to just use animate.css
-const skillsPage = document.querySelector(".skills-svg");
-const projectsPage = document.querySelector(".projects-svg");
-const skillsPageLogo = document.querySelector(".skills-svg");
-const projectsPageLogo = document.querySelector(".projects-svg");
-const buttoniz = document.body;
+// Any domElement with .float-in class get to float into view
 
-skillsPage.style.display = "none";
-projectsPage.style.display = "none";
+const floatUpwards = (domElement) => {
+  let flag = false;
 
-buttoniz.onwheel = expan1d;
-buttoniz.ontouchstart = expan1d;
-buttoniz.onscroll = expan1d;
+  function addFloatIn() {
+    if (
+      document.querySelector(".landing-page").getBoundingClientRect().height -
+        getYcoordinateViewport(domElement) >=
+      70
+    ) {
+      if (domElement.classList.contains("float-in-slow")) {
+        domElement.classList.add("come-in-slow");
+      } else {
+        domElement.classList.add("come-in");
+      }
+      document.removeEventListener("scroll", addFloatIn);
+    }
+  }
+  document.addEventListener("scroll", addFloatIn);
+};
 
-function expan1d() {
-  console.log("test1");
-  skillsPage.style.display = "flex";
-  projectsPage.style.display = "flex";
-  skillsPageLogo.classList.add("animated", "bounceInLeft");
-  projectsPageLogo.classList.add("animated", "bounceInLeft");
-}
+const getYcoordinateViewport = (domElement) => {
+  return domElement.getBoundingClientRect().y;
+};
+
+[...document.querySelectorAll(".float-in")].map((x) => floatUpwards(x));

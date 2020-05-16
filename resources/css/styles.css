@@ -220,43 +220,86 @@ h3 {
 
 .aboutme {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) 0.2fr 0.3fr 0.2fr repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr) 0.6fr repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr) minmax(150px, 0.85fr) 0.2fr 0.3fr 0.2fr repeat(
+      3,
+      1fr
+    );
+  grid-template-rows: repeat(3, 1fr) 0.6fr 0.2fr minmax(150px, 0.7fr) repeat(
+      2,
+      1fr
+    );
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 90vh;
   margin-bottom: 10vh;
 }
 
-/* .round-explosion {
+.round-explosion {
   grid-area: 5 / 5 / 6 / 6;
   background-color: #ffc107;
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  transition: all 25s;
-} */
+  box-shadow: 0px 0px 2px 5px f5f5f5;
+  transition: box-shadow 0.1s linear;
+}
+
+.round-explosion:hover {
+  box-shadow: 0px 0px 0px 35px #f5f5f5, 0px 0px 2px 37px #ffc107;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.main-about,
+.random,
+.photo-casual,
+.current-occupation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 2px 3px 15px -8px rgba(0, 0, 0, 0.89);
+  border-radius: 2px;
+}
 
 .current-occupation {
   grid-area: 2 / 7 / 4 / 9;
   height: max(20vh, 7em);
-  background-color: yellowgreen;
+  background-color: #9e9e9e;
 }
 .random {
   grid-area: 6 / 7 / 9 / 9;
   height: max(35vh, 17em);
-  background-color: yellowgreen;
+  background-color: #7d7d7d;
 }
 .main-about {
   grid-area: 2 / 2 / 9 / 4;
-  height: max(80vh, 20em);
-  background-color: yellowgreen;
+  height: fit-content;
+  background-color: #919191;
+  margin-left: -20px;
+  padding-bottom: min(15px, 2vh);
 }
+
+.quick-bio {
+  padding-left: 5%;
+  color: white;
+  font-size: 20px;
+}
+.quick-bio p:first-of-type {
+  width: 49%;
+  height: 30vh;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  font-size: 2.6vh;
+}
+
 .photo-casual {
   grid-area: 3 / 3 / 6 / 5;
   height: max(30vh, 14em);
-  background-color: blue;
+  background-color: #bdbdbd;
   margin-right: 15px;
+  border: 3px ridge #646464;
+  background-image: url(/resources/images/profilepic.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .skills-page-scale {
@@ -281,24 +324,13 @@ h3 {
   grid-row-gap: 0px;
 }
 
-.border-b {
-  width: 80%;
-  margin-left: 10%;
-  border-bottom: 1px solid #4fa8a4;
-  z-index: 500;
-}
-
-.programming {
-  grid-area: 1 / 2 / 4 / 4;
-  width: 100%;
-  height: 350px;
-  background-color: #7d7d7d;
-}
-
 .programming h3,
 .tools h3,
 .skills h3,
-.div4 h3 {
+.div4 h3,
+.current-occupation h3,
+.random h3,
+.main-about h3 {
   text-align: center;
   margin-bottom: 5px;
   font-weight: 300;
@@ -335,6 +367,20 @@ h3 {
   to {
     transform: translateY(0);
   }
+}
+
+.border-b {
+  width: 80%;
+  margin-left: 10%;
+  border-bottom: 1px solid #4fa8a4;
+  z-index: 500;
+}
+
+.programming {
+  grid-area: 1 / 2 / 4 / 4;
+  width: 100%;
+  height: 350px;
+  background-color: #7d7d7d;
 }
 
 .programming,

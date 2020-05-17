@@ -218,6 +218,44 @@ h3 {
   color: thistle;
 }
 
+.list.half ul {
+  margin: 0;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  padding: 0;
+  width: 45%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.list.half {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.list ul {
+  margin: 0;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.list li p {
+  margin: 0;
+  margin-right: 5%;
+  margin-bottom: 1.2em;
+}
+
+.list li:last-of-type p {
+  margin-bottom: 0;
+}
+
 .aboutme {
   display: grid;
   grid-template-columns: repeat(2, 1fr) minmax(150px, 0.85fr) 0.2fr 0.3fr 0.2fr repeat(
@@ -230,8 +268,10 @@ h3 {
     );
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: 90vh;
+  height: min(90vh, 1080px);
+  width: min(100vw, 1920px);
   margin-bottom: 10vh;
+  margin-left: min(5vh, 25%);
 }
 
 .round-explosion {
@@ -258,16 +298,22 @@ h3 {
   justify-content: flex-start;
   box-shadow: 2px 3px 15px -8px rgba(0, 0, 0, 0.89);
   border-radius: 2px;
+  height: fit-content;
 }
 
 .current-occupation {
   grid-area: 2 / 7 / 4 / 9;
-  height: max(20vh, 7em);
   background-color: #9e9e9e;
 }
+
+.hover:hover {
+  transition: all 0.2s ease;
+  text-shadow: 2px 2px 2px red;
+}
+
 .random {
   grid-area: 6 / 7 / 9 / 9;
-  height: max(35vh, 17em);
+
   background-color: #7d7d7d;
 }
 .main-about {
@@ -278,24 +324,30 @@ h3 {
   padding-bottom: min(15px, 2vh);
 }
 
-.quick-bio {
-  padding-left: 5%;
+.quick-bio,
+.list {
+  padding: 0 5% 0 5%;
   color: white;
-  font-size: 20px;
+  font-size: 120%;
 }
+
+.quick-bio p {
+  font-size: 100%;
+}
+
 .quick-bio p:first-of-type {
   width: 49%;
-  height: 30vh;
+  height: fit-content;
   margin-bottom: 5%;
-  margin-top: 10%;
-  font-size: 2.6vh;
+  margin-top: 5%;
+  font-size: 100%;
 }
 
 .photo-casual {
   grid-area: 3 / 3 / 6 / 5;
-  height: max(30vh, 14em);
+  height: min(30vh, 14em);
   background-color: #bdbdbd;
-  margin-right: 15px;
+  margin: -15px 15px 0 0;
   border: 3px ridge #646464;
   background-image: url(/resources/images/profilepic.png);
   background-size: cover;
@@ -481,26 +533,26 @@ ul.footerLinkUl li {
   float: right;
 }
 
-ul li {
+footer ul li {
   display: inline;
 }
 
-ul p {
+footer ul p {
   display: inline;
   flex-direction: row;
 }
 
-ul a:link,
+footer ul a:link,
 a:visited {
   text-decoration: none;
   color: #546e7a;
 }
 
-ul a:hover,
+footer ul a:hover,
 a:active {
   color: darkorange;
 }
 
-ul {
+footer ul {
   overflow: hidden;
 }

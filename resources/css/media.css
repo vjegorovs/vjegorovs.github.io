@@ -51,8 +51,35 @@
   }
 }
 
-@media only screen and (max-width: 1600px) {
-  .about-me {
+@media only screen and (min-width: 1800px) {
+  .aboutme {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  .quick-bio,
+  .list {
+    font-size: 20px;
+  }
+
+  .quick-bio p {
+    font-size: 120%;
+  }
+
+  .quick-bio p:first-of-type {
+    font-size: 120%;
+  }
+
+  .photo-casual {
+    height: max(20vh, 250px);
+    width: max(20vh, 250px);
+  }
+
+  .skills-grid {
     width: 80vw;
     margin-left: 10vw;
   }

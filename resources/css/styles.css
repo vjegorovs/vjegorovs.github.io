@@ -182,7 +182,8 @@ h3 {
 
 .landing-page img {
   height: 10em;
-  border-radius: 45%;
+
+  border-radius: 35%;
 }
 
 .portrait-image {
@@ -256,6 +257,12 @@ h3 {
   margin-bottom: 0;
 }
 
+.aboutme-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .aboutme {
   display: grid;
   grid-template-columns: repeat(2, 1fr) minmax(150px, 0.85fr) 0.2fr 0.3fr 0.2fr repeat(
@@ -268,10 +275,10 @@ h3 {
     );
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: min(90vh, 1080px);
+  height: fit-content;
+  max-height: 100vh;
   width: min(100vw, 1920px);
-  margin-bottom: 10vh;
-  margin-left: min(5vh, 25%);
+  margin-bottom: 14vh;
 }
 
 .round-explosion {
@@ -345,9 +352,10 @@ h3 {
 
 .photo-casual {
   grid-area: 3 / 3 / 6 / 5;
-  height: min(30vh, 14em);
+  height: min(30vh, 13em);
+  width: min(30vh, 13em);
   background-color: #bdbdbd;
-  margin: -15px 15px 0 0;
+  margin: 0 15px 0 0;
   border: 3px ridge #646464;
   background-image: url(/resources/images/profilepic.png);
   background-size: cover;
@@ -431,7 +439,7 @@ h3 {
 .programming {
   grid-area: 1 / 2 / 4 / 4;
   width: 100%;
-  height: 350px;
+  height: 100%;
   background-color: #7d7d7d;
 }
 
@@ -466,6 +474,7 @@ h3 {
   width: 100%;
   height: 100%;
   background-color: #919191;
+  visibility: hidden;
 }
 
 .projects {
